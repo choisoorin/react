@@ -1,7 +1,8 @@
-// import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./App.css";
 
 import BtnToNaver from "./components/BtnToNaver";
+import ChangeFocus from "./components/ChangeFocus";
 import ChangeObj from "./components/ChangeObj";
 import ClassProps from "./components/ClassProps";
 import ClassState from "./components/ClassState";
@@ -12,11 +13,24 @@ import CustomObj from "./components/CustomObj";
 import FunctionalState from "./components/FuntionalState";
 import ImgComponent from "./components/ImgComponent";
 import MainHeader from "./components/MainHeader";
+import RefDOM from "./components/RefDOM";
+import TestRef from "./components/TestRef";
+import RandomQuiz from "./components/RandomQuiz";
+import ReactFragment from "./components/ReactFragment";
+import TableColumn from "./components/TableColumn";
+import ConditionalRender from "./components/ConditionalRender";
+import ConditionalRender2 from "./components/ConditionalRender2";
+import PracticeOne from "./components/PracticeOne";
+import PracticeTwo from "./components/PracticeTwo";
+import TestUseEffect from "./components/TestUseEffect";
+import Timer from "./components/Timer";
+import PracticeTimer from "./components/PracticeTimer";
+import UseEffectFetch from "./components/UseEffectFetch";
 
 function App() {
   return (
     <div className="App">
-      <Comparing />
+      <UseEffectFetch />
     </div>
   );
 }
@@ -58,3 +72,73 @@ export default App;
 //   { name: "루피", age: 4, nickName: "공주님" },
 //   { name: "크롱", age: 5, nickName: "장난꾸러기" },
 // ];
+
+// 조건부렌더링 1
+// const [condition, setCondition] = useState("보이기");
+
+// const onChange = () => {
+//   condition === "보이기" ? setCondition("감추기") : setCondition("보이기");
+// };
+
+// const ConditionRender = condition !== "보이기" && <ConditionalRender />;
+
+// return (
+//   <div className="App">
+//     {ConditionRender}
+//     <button onClick={onChange}>{condition}</button>
+//   </div>
+// );
+
+// 조건부렌더링 2
+// const [condition, setCondition] = useState("1번");
+
+// const onChange = () => {
+//   condition === "1번" ? setCondition("2번") : setCondition("1번");
+// };
+
+// return (
+//   <div className="App">
+//     {condition !== "1번" ? <ConditionalRender /> : <ConditionalRender2 />}
+//     <button onClick={onChange}>{condition}</button>
+//   </div>
+// );
+
+// 조건부렌더링 (PracticeOne, PracticeTwo)
+// const [condition, setCondition] = useState("1번");
+
+// const onChange = () => {
+//   condition === "1번" ? setCondition("2번") : setCondition("1번");
+// };
+
+// return (
+//   <div className="App">
+//     {condition === "1번" ? <PracticeOne text={condition} /> : <PracticeTwo text={condition} />}
+//     <button onClick={onChange}>{condition}</button>
+//   </div>
+// );
+
+// Timer
+// const [show, setShow] = useState(false);
+
+// return (
+//   <div className="App">
+//     {show && <Timer />}
+//     <button onClick={() => setShow(!show)}>버튼</button>
+//   </div>
+// );
+
+// PracticeTimer
+// const [show, setShow] = useState("보이기");
+//   const buttonEl = useRef();
+//   useEffect(() => {
+//     buttonEl.current.focus();
+//   }, []);
+
+//   return (
+//     <div className="App">
+//       {show && <PracticeTimer />}
+//       <button onClick={() => setShow(!show)} ref={buttonEl}>
+//         {show ? "숨기기" : "보이기"}
+//       </button>
+//     </div>
+//   );
