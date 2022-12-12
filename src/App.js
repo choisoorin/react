@@ -26,13 +26,14 @@ import TestUseEffect from "./components/TestUseEffect";
 import Timer from "./components/Timer";
 import PracticeTimer from "./components/PracticeTimer";
 import UseEffectFetch from "./components/UseEffectFetch";
+import UsingUseMemo from "./components/UsingUseMemo";
+import TestInlineCSS from "./components/TestInlineCSS";
+import TestCssFile from "./components/TestCssFile";
+import TestStyled from "./components/TestStyled";
+import AppStyled from "./components/AppStyled";
 
 function App() {
-  return (
-    <div className="App">
-      <UseEffectFetch />
-    </div>
-  );
+  return <TestCssFile />;
 }
 
 export default App;
