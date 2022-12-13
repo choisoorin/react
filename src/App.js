@@ -31,9 +31,24 @@ import TestInlineCSS from "./components/TestInlineCSS";
 import TestCssFile from "./components/TestCssFile";
 import TestStyled from "./components/TestStyled";
 import AppStyled from "./components/AppStyled";
+import Images from "./components/Images";
+import Dialog from "./components/Dialog";
+import WelcomeDialog from "./components/WelcomeDialog";
+import FancyBorder from "./components/FancyBorder";
+import SignUpDialog from "./components/SignUpDialog";
 
 function App() {
-  return <TestCssFile />;
+  return (
+    <div className="App">
+      <Dialog
+        color="skyblue"
+        title={<button onClick={() => alert("Welcome!")}>웰컴 버튼!</button>}
+        message="회원 가입이 필요한 서비스 입니다"
+      >
+        <a href="#">회원 가입 페이지로 이동</a>
+      </Dialog>
+    </div>
+  );
 }
 
 export default App;
@@ -143,3 +158,18 @@ export default App;
 //       </button>
 //     </div>
 //   );
+
+// 컴포넌트 합성 및 특수화 (재사용)
+// return (
+//   <div className="App">
+//     <FancyBorder color="red">
+//       <Dialog
+//         color="orange"
+//         title={<button onClick={() => alert("Welcome!")}>웰컴 버튼!</button>}
+//         message="회원 가입이 필요한 서비스 입니다"
+//       >
+//         <a href="#">회원 가입 페이지로 이동</a>
+//       </Dialog>
+//     </FancyBorder>
+//   </div>
+// );
